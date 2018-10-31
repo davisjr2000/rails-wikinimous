@@ -1,0 +1,10 @@
+<h2>"<%= @article.content %>"</h2>
+<h3>-<%= @article.title %></h3>
+<h4>From Dimension <%= ["C-","Z-","","M-"].sample + rand(60..200).to_s  %><img id="portal" src="https://media.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.gif"></h4>
+<h3 class="links"><%= link_to "Update?", edit_article_path %></h3>
+<h3 class="links"><%= link_to "Delete?", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you su-sure? Aw jeez..." } %>
+</h3>
+<h4><%= link_to "Ba-back to the wiki", articles_path %></h4>
+
